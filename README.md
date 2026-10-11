@@ -1,152 +1,114 @@
 <div align="center">
 
-# 🌐 Zerodha Landing Page Clone (Demo)
+# 👨‍💻 Swapnil Mandal ([@One-Hat](https://github.com/One-Hat))
 
-### *The Genesis Repository of Swapnil Mandal ([@One-Hat](https://github.com/One-Hat))*
+### *Recursive learner, always refactoring what I know. Compiling curiosity into code.*
 
-[![GitHub repo size](https://img.shields.io/github/repo-size/One-Hat/Demo?style=flat-square&color=387ed1)](https://github.com/One-Hat/Demo)
-[![GitHub stars](https://img.shields.io/github/stars/One-Hat/Demo?style=flat-square&color=yellow)](https://github.com/One-Hat/Demo/stargazers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.style=flat-square)](LICENSE)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![GitHub followers](https://img.shields.io/github/followers/One-Hat?label=Followers&style=flat-square&color=387ed1)](https://github.com/One-Hat)
+[![Public Repositories](https://img.shields.io/badge/Public_Repos-19-blue?style=flat-square)](https://github.com/One-Hat?tab=repositories)
+[![Primary Stack](https://img.shields.io/badge/Stack-Python_%7C_TypeScript_%7C_PyTorch_%7C_Next.js-success?style=flat-square)](https://github.com/One-Hat)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+
+<br/>
 
 <p align="center">
-  A clean, modern, responsive landing page clone inspired by Zerodha's investment platform UI.
+  <b>Frontier Deep Learning & Continual AI Researcher • Decentralized Systems (Web3) • Backend & Cloud Engineer</b>
 </p>
 
-[Live Demo](#quick-start) • [Features](#key-features) • [Developer Journey Briefing](#briefing-swapnils-github-engineering-journey) • [Author](#author)
+[Flagship Projects](#-flagship-contributions--projects) • [Research Highlights](#-ai--deep-learning-research) • [Tech Stack](#-technical-toolkit) • [The Journey](#-from-first-commit-to-frontier-ai)
 
 ---
 
 </div>
 
-## 📌 About This Repository
+## 📌 Executive Briefing
 
-Created on **July 9, 2025**, this repository marks the foundational milestone in Swapnil Mandal's development journey — his very first Git repository and first step into web development and version control.
+I am an engineering and AI researcher focused on the intersection of **deep neural architectures**, **edge continual learning**, **cryptographic identity/verifiable data systems**, and **scalable distributed backends**. 
 
-Originally an introductory HTML layout experiment, the project has been modernized into a clean, standards-compliant, responsive single-page landing application showcasing modern CSS layout principles, semantic HTML5, and accessible UI interactions.
-
----
-
-## ✨ Key Features
-
-- **🎯 Zerodha Minimalist Aesthetic**: Clean typography, structured whitespace, and Zerodha's signature blue palette (`#387ed1`).
-- **📱 Fully Responsive**: Fluid multi-breakpoint layout supporting mobile, tablet, and desktop viewports with an adaptive hamburger navigation menu.
-- **⚡ Zero Dependencies**: Pure HTML5, CSS3, and vanilla JavaScript for ultra-fast load times and instantaneous rendering.
-- **💬 Interactive Lead Modal**: Accessible modal overlay for account signup with ESC key and backdrop-dismiss handling.
-- **📊 Modern Showcase Sections**:
-  - Hero banner with vector branding and platform illustration
-  - Transparent pricing & ecosystem metric counters (`₹0 brokerage`, `1.5+ Cr clients`)
-  - Product feature grid with cards and subtle micro-interactions
-  - Comprehensive footer navigation and regulatory disclaimer formatting
+My GitHub contributions span **19 repositories**, progressing from core web fundamentals to state-of-the-art vision fusion research, parameter-efficient fine-tuning (PEFT), zero-knowledge decentralized identity, and high-throughput microservices.
 
 ---
 
-## 🚀 Quick Start
+## 🏆 Flagship Contributions & Projects
 
-No build tools or package managers required. Simply clone and open:
+### 🧠 AI & Deep Learning Research
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/One-Hat/Demo.git
-
-# 2. Navigate into the directory
-cd Demo
-
-# 3. Open index.html directly in your browser:
-# On Windows:
-start index.html
-
-# On macOS:
-open index.html
-
-# Or run with any static server:
-npx serve .
-```
+| Repository | Focus & Architecture | Key Contributions & Highlights |
+| :--- | :--- | :--- |
+| **[`Research_Work_JU`](https://github.com/One-Hat/Research_Work_JU)** | **Adaptive RL Fusion for Hybrid Vision**<br/>*(ConvNeXt + Swin Transformer + RL Policy)* | • Designed per-class Reinforcement Learning policy agent combining complementary inductive biases of CNNs and Vision Transformers.<br/>• Full empirical research suite: PyTorch calibration pipelines, Grad-CAM attention visualizations, BibTeX citations, and publication manuscript (`main.tex`). |
+| **[`COGNX_2 (MNEMA)`](https://github.com/One-Hat/COGNX_2)** | **Memory-Native Edge Continual Learning**<br/>*(Event-Driven Architecture)* | • Novel architecture mitigating catastrophic forgetting on resource-constrained edge devices.<br/>• Modern, reproducible research pipeline benchmarked using `uv`, custom event memory buffers, and evaluation metrics. |
+| **[`JEE-NEET_ModeL`](https://github.com/One-Hat/JEE-NEET_ModeL)** | **Domain-Specific LLM Fine-Tuning**<br/>*(Google Gemma-2B-IT + LoRA / PEFT)* | • Fine-tuned Gemma-2B for STEM reasoning and competitive examination question generation.<br/>• Includes Hugging Face Safetensors adapters, custom Jinja chat formatting, and evaluation sets. |
+| **[`Comp_vision_`](https://github.com/One-Hat/Comp_vision_)** | **Real-Time Perception & Tracking**<br/>*(YOLOv9 + ByteTrack / DeepSORT)* | • Production-ready computer vision pipelines for real-time multi-class object detection and multi-object tracking. |
 
 ---
 
-## 🗺️ Repository Structure
+### 🛡️ Decentralized Systems & Healthcare Security (Web3)
+
+| Repository | Focus & Architecture | Key Contributions & Highlights |
+| :--- | :--- | :--- |
+| **[`MEDVAULT_DID`](https://github.com/One-Hat/MEDVAULT_DID)** | **Decentralized Identity & Verifiable Consent**<br/>*(Next.js, Web Crypto, did:peer, HL7 FHIR)* | • Privacy-first healthcare consent platform eliminating centralized medical data honeypots.<br/>• Native Web Crypto API (NIST P-256 / AES-GCM), Hyperledger Aries pairwise `did:peer`, and ABDM / HL7 FHIR integration.<br/>• Implements AnonCreds Zero-Knowledge Proof (ZKP) predicate proofs for verifiable consent and insurance fraud prevention. |
+
+---
+
+### ⚡ Distributed Systems, Backend & Fullstack AI
+
+| Repository | Focus & Architecture | Key Contributions & Highlights |
+| :--- | :--- | :--- |
+| **[`Backend_Projects`](https://github.com/One-Hat/Backend_Projects)** | **Production TypeScript Backend Portfolio**<br/>*(Node.js, TypeScript, Redis, MongoDB, CI/CD)* | • High-performance microservices portfolio with automated GitHub Actions CI/CD.<br/>• Includes high-concurrency URL Shortener (Redis caching & rate limiting) and Headless CMS with role-based access control (RBAC). |
+| **[`Some_Stuff (PaperTrail)`](https://github.com/One-Hat/Some_Stuff)** | **AI Research Explorer & Assistant**<br/>*(React, Express, MongoDB, Gemini API, arXiv)* | • Interactive academic preprint discovery platform with real-time arXiv search.<br/>• Google Gemini API integration for multi-turn conversational paper querying, structured insight extraction, and BibTeX export. |
+
+---
+
+### 📚 Quantitative Finance & Deep Theoretical Studies
+
+- **[`qlib`](https://github.com/One-Hat/qlib)** & **[`machine-learning-for-trading`](https://github.com/One-Hat/machine-learning-for-trading)**: Active exploration of AI-powered quant research, market dynamics modeling, and automated trading strategies.
+- **[`annotated_deep_learning_paper_implementations`](https://github.com/One-Hat/annotated_deep_learning_paper_implementations)** & **[`continual-learning-papers`](https://github.com/One-Hat/continual-learning-papers)**: In-depth code-level analysis of foundational neural architectures (Transformers, Diffusion, Continual Learning, Optimizers).
+
+---
+
+## 🛠️ Technical Toolkit
+
+<div align="center">
+
+| Domain | Technologies & Frameworks |
+| :--- | :--- |
+| **Languages** | Python, TypeScript, JavaScript, SQL, HTML5, CSS3, C/C++ |
+| **Machine Learning & AI** | PyTorch, Hugging Face Transformers, LoRA/PEFT, Swin ViT, ConvNeXt, YOLOv9, OpenCV, Scikit-Learn |
+| **Web & Decentralized (Web3)** | Next.js, React, Node.js, Express, Tailwind CSS, Web Crypto API, Hyperledger Aries (`did:peer`), AnonCreds |
+| **Databases & Caching** | MongoDB, Redis, PostgreSQL (Supabase) |
+| **DevOps & Tooling** | Git, GitHub Actions (CI/CD), `uv`, Docker, Vite, Linux |
+
+</div>
+
+---
+
+## 🌱 From First Commit to Frontier AI
 
 ```text
-Demo/
-├── index.html        # Modernized semantic HTML5 & responsive stylesheet
-├── landing.png       # Zerodha platform ecosystem illustration
-├── logo.svg          # Zerodha SVG vector brand logo
-└── README.md         # Documentation & GitHub journey overview
+2025: Genesis (One-Hat/Demo)
+│     └── First Git repository: Web markup, Git version control fundamentals
+│
+2026 Q1-Q2: Machine Learning Foundations
+│     ├── Data analysis, exploratory statistics, and classical ML (Machine-Learning-01, Data_Analysis)
+│     └── LLM fine-tuning with PEFT/LoRA (JEE-NEET_ModeL)
+│
+2026 Q3-Q4: Research & Production Systems
+      ├── Adaptive Reinforcement Learning Vision Fusion (Research_Work_JU)
+      ├── Memory-Native Edge Continual Learning (COGNX_2 / MNEMA)
+      ├── Zero-Knowledge Decentralized Healthcare Identity (MEDVAULT_DID)
+      └── High-Throughput TypeScript Backends & AI Fullstack Apps (Backend_Projects, PaperTrail)
 ```
 
----
-
-## 🌟 Briefing: Swapnil's GitHub Engineering Journey
-
-Since committing this initial `Demo` repository, Swapnil Mandal ([@One-Hat](https://github.com/One-Hat)) has built an expansive portfolio across **AI & Deep Learning research**, **continual learning systems**, **decentralized identity (Web3)**, **backend architecture**, and **fullstack web applications**.
-
-Here is an architectural briefing of key repositories and domains:
-
-```mermaid
-mindmap
-  root((Swapnil Mandal<br/>One-Hat))
-    Deep Learning & AI Research
-      Adaptive RL Vision Fusion [Research_Work_JU]
-      Edge Continual Learning [COGNX_2 / MNEMA]
-      Domain LLM Fine-Tuning [JEE-NEET_ModeL]
-    Computer Vision
-      YOLOv9 Tracking [Comp_vision_]
-      CSPNet Architectures [CrossStagePartialNetworks]
-    Decentralized Healthcare
-      Zero-Knowledge DIDs [MEDVAULT_DID]
-      ABDM / HL7 FHIR Consent
-    Systems & Backend
-      Microservices & Redis [Backend_Projects]
-      Automated CI/CD Workflows
-    Fullstack AI Apps
-      PaperTrail Research Explorer [Some_Stuff]
-      React, Node, Gemini API, arXiv
-```
-
-### 1. 🧠 Frontier AI & Deep Learning Research
-- **[Research_Work_JU](https://github.com/One-Hat/Research_Work_JU)**:
-  * *Adaptive Reinforcement Learning Fusion for Hybrid Vision Architectures* (Jadavpur University collaborative research).
-  * Implements an adaptive, per-class Reinforcement Learning policy agent combining the complementary inductive biases of CNNs (ConvNeXt/ResNet) and Vision Transformers (Swin Transformer).
-  * Includes end-to-end PyTorch notebooks, LaTeX research manuscript (`main.tex`), Grad-CAM vs. Swin attention calibration plots, and BibTeX citations.
-- **[COGNX_2 (MNEMA)](https://github.com/One-Hat/COGNX_2)**:
-  * *Memory-Native Event-Driven Architecture for Edge Continual Learning*.
-  * Research codebase benchmarked with `uv`, featuring event-driven memory buffers designed to prevent catastrophic forgetting on resource-constrained edge hardware.
-- **[JEE-NEET_ModeL](https://github.com/One-Hat/JEE-NEET_ModeL)**:
-  * LoRA fine-tuned Google Gemma-2B-IT model specialized in generating and solving complex STEM questions for competitive examinations (JEE Advanced & NEET). Includes Safetensors adapter weights and custom Jinja chat templates.
-
-### 2. 🛡️ Decentralized Healthcare & Identity (Web3)
-- **[MEDVAULT_DID](https://github.com/One-Hat/MEDVAULT_DID)**:
-  * Decentralized identity and verifiable consent platform for healthcare.
-  * Engineered with **Next.js**, **Web Crypto API** (NIST P-256 / AES-GCM), **Hyperledger Aries pairwise `did:peer`**, and **ABDM / HL7 FHIR** standards.
-  * Implements AnonCreds Zero-Knowledge Proof (ZKP) predicate proofs to eliminate centralized patient data honeypots and prevent insurance fraud.
-
-### 3. ⚡ Scalable Backend & Distributed Systems
-- **[Backend_Projects](https://github.com/One-Hat/Backend_Projects)**:
-  * Production-grade Node.js/TypeScript backend portfolio with automated GitHub Actions CI/CD.
-  * Projects include a high-concurrency URL Shortener (Redis caching, rate-limiting, MongoDB) and a Headless CMS with role-based access control (RBAC).
-
-### 4. 🌐 Fullstack AI Applications
-- **[Some_Stuff (PaperTrail — AI Research Explorer)](https://github.com/One-Hat/Some_Stuff)**:
-  * Fullstack academic research intelligence platform built with React, Vite, Tailwind CSS, Express, MongoDB, Google Gemini API, and arXiv API integration.
-  * Supports preprint exploration, multi-turn AI paper analysis, reading lists, and BibTeX citation export.
-
-### 5. 👁️ Computer Vision & Perception
-- **[Comp_vision_](https://github.com/One-Hat/Comp_vision_)**:
-  * Real-time object detection and multi-object tracking pipelines featuring YOLOv9, ByteTrack, and DeepSORT implementations.
+> **About this repository (`One-Hat/Demo`):**  
+> This repo was my very first commit on GitHub (July 9, 2025). It is preserved as a permanent milestone of where my journey started — from learning how to stage and commit simple HTML/CSS files to architecting cutting-edge research models and decentralized systems today.
 
 ---
 
-## 👨‍💻 Author
+## 📬 Connect & Collaborate
 
-**Swapnil Mandal**  
-- **GitHub**: [@One-Hat](https://github.com/One-Hat)  
-- **Bio**: *"Recursive learner, always refactoring what I know. Compiling curiosity into code. Always debugging my own assumptions ~ one commit at a time :)"*
+- **GitHub Profile**: [@One-Hat](https://github.com/One-Hat)
+- **Collaborations**: Open to research partnerships in Continual Learning, Multimodal Vision, and Privacy-Preserving Web3 Systems.
 
----
-
-## 📄 License
-
-This demo project is open source and available under the [MIT License](LICENSE).
+<div align="center">
+  <sub>© 2025–2026 Swapnil Mandal • Maintained with continuous learning</sub>
+</div>
