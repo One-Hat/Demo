@@ -1,31 +1,639 @@
-<div style="display: flex; justify-content: space-between; padding: 100px; padding: 100px; padding-top: 20px; padding-bottom: 20px; box-shadow: 2px 1px 2px #eee;">
-    <img src="logo.svg" height="40" width="200" style="padding-top: 5px;"></img>
- <div style="display: flex; ">
-        <div style="padding: 20px; color: #666666; cursor: pointer;">
-    Signup
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zerodha - Invest in everything</title>
+  <meta name="description" content="Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more. Demo project by Swapnil Mandal.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <style>
+    :root {
+      --primary-color: #387ed1;
+      --primary-hover: #2b6cb0;
+      --text-main: #424242;
+      --text-muted: #666666;
+      --text-light: #9b9b9b;
+      --bg-white: #ffffff;
+      --bg-light: #fbfbfb;
+      --border-color: #eeeeee;
+      --card-border: #e6e6e6;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-main);
+      background-color: var(--bg-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Journey Announcement Banner */
+    .top-badge-banner {
+      background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+      color: #ffffff;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-badge-banner a {
+      color: #93c5fd;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .top-badge-banner a:hover {
+      color: #ffffff;
+    }
+
+    /* Navigation Bar */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo img {
+      height: 22px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 28px;
+    }
+
+    .nav-links li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .nav-links li a:hover {
+      color: var(--primary-color);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+      text-align: center;
+    }
+
+    .hero-image-wrap {
+      margin-bottom: 48px;
+    }
+
+    .hero-image-wrap img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.06));
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 600;
+      color: #333333;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-bottom: 36px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      padding: 12px 36px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 10px rgba(56, 126, 209, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(56, 126, 209, 0.35);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    /* Features Grid */
+    .features-section {
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 70px 24px;
+    }
+
+    .features-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 36px;
+    }
+
+    .feature-card {
+      background-color: var(--bg-white);
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background-color: #ebf3fd;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      color: #333333;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Ecosystem / Trust Numbers */
+    .trust-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .trust-stat h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .trust-stat p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Modal Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 16px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #ffffff;
+      border-radius: 8px;
+      max-width: 450px;
+      width: 100%;
+      padding: 32px;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      animation: modalFade 0.2s ease-out;
+    }
+
+    @keyframes modalFade {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #999;
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      color: #333;
+    }
+
+    .modal-box h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .modal-box p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 2px rgba(56, 126, 209, 0.15);
+    }
+
+    .modal-submit {
+      width: 100%;
+      padding: 12px;
+      background: var(--primary-color);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .modal-submit:hover {
+      background: var(--primary-hover);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border-color);
+      padding: 48px 24px 24px;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links li a:hover {
+      color: var(--primary-color);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 24px;
+      border-top: 1px solid #eaeaea;
+    }
+
+    .footer-bottom a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-subtitle {
+        font-size: 1.05rem;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .trust-stat h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Milestone Notice -->
+  <aside class="top-badge-banner" aria-label="Developer genesis banner">
+    <span>🌱 <strong>Milestone Repo:</strong> Swapnil's First Git Project (July 2025)</span>
+    <span>•</span>
+    <a href="https://github.com/One-Hat" target="_blank" rel="noopener noreferrer">Explore full GitHub portfolio (@One-Hat) &rarr;</a>
+  </aside>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand-logo" aria-label="Zerodha Home">
+        <img src="logo.svg" alt="Zerodha Logo" width="160" height="22">
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+        ☰
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#signup" class="open-modal-btn">Signup</a></li>
+          <li><a href="#about" class="nav-anchor">About</a></li>
+          <li><a href="#products" class="nav-anchor">Products</a></li>
+          <li><a href="#pricing" class="nav-anchor">Pricing</a></li>
+          <li><a href="#support" class="nav-anchor">Support</a></li>
+        </ul>
+      </nav>
     </div>
-    <div style="padding: 20px; color: #666666; cursor: pointer;">
-    About
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="hero-image-wrap">
+        <img src="landing.png" alt="Zerodha Ecosystem & Analytics Platform" width="1000" height="380">
+      </div>
+
+      <h1 class="hero-title">Invest in everything</h1>
+      <p class="hero-subtitle">
+        Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.
+      </p>
+
+      <button class="btn-primary open-modal-btn" id="ctaSignupBtn">Sign up now</button>
+    </section>
+
+    <!-- Trust Stats -->
+    <section class="trust-section" aria-label="Platform Highlights">
+      <div class="trust-stat">
+        <h2>₹0</h2>
+        <p>Free equity delivery & direct mutual funds</p>
+      </div>
+      <div class="trust-stat">
+        <h2>₹20</h2>
+        <p>Flat fee for intraday and F&amp;O trades</p>
+      </div>
+      <div class="trust-stat">
+        <h2>1.5+ Cr</h2>
+        <p>Active clients across India</p>
+      </div>
+      <div class="trust-stat">
+        <h2>15%+</h2>
+        <p>Retail trading volume contribution</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="products">
+      <div class="features-container">
+        <article class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Modern Ecosystem</h3>
+          <p>
+            Clean, ultra-fast trading interfaces engineered for modern markets with intuitive charting and real-time execution.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Zero Hassle</h3>
+          <p>
+            No hidden fees, no spam notifications, and no gimmicks. Transparent brokerage calculations tailored for investors.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Varsity & Education</h3>
+          <p>
+            Free, in-depth market education and open resources created to empower every retail investor to trade intelligently.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Dialog -->
+  <div class="modal-overlay" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      <h3 id="modalTitle">Open a free Demat account</h3>
+      <p>Modern trading and investment platform built for developers, investors, and traders.</p>
+      
+      <form id="signupForm" onsubmit="event.preventDefault(); alert('Demo submission received! Thank you for checking out Swapnil\'s project.'); document.getElementById('signupModal').classList.remove('active');">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Swapnil Mandal" required>
+        </div>
+        <div class="form-group">
+          <label for="emailAddr">Email Address</label>
+          <input type="email" id="emailAddr" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="mobileNumber">Mobile Number (+91)</label>
+          <input type="tel" id="mobileNumber" placeholder="9876543210" pattern="[0-9]{10}" required>
+        </div>
+        <button type="submit" class="modal-submit">Continue to Verification &rarr;</button>
+      </form>
     </div>
-    <div style="padding: 20px; color: #666666; cursor: pointer;">
-    Products
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#referral">Referral Programme</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#press">Press &amp; Media</a></li>
+        <li><a href="https://github.com/One-Hat" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+      </ul>
+      <p>
+        Zerodha Broking Ltd.: Member of NSE, BSE &amp; MCX – SEBI Registration no.: INZ000031633. CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019.
+      </p>
+      <div class="footer-bottom">
+        <span>&copy; 2025–2026 Zerodha Clone Demo • First Git Repository by <strong>Swapnil Mandal</strong></span>
+        <span>Repository: <a href="https://github.com/One-Hat/Demo" target="_blank" rel="noopener noreferrer">One-Hat/Demo</a></span>
+      </div>
     </div>
-    <div style="padding: 20px; color: #666666; cursor: pointer;">
-    Pricing
-    </div>
-    <div style="padding: 20px; color: #666666; cursor: pointer;">
-    Support
-    </div> 
- </div>
-</div>
-<br></br>
-<br></br>
-<br></br>
-<center>
-    <img src="landing.png"  height="380" width="1000" style="box-shadow: #666666;"></img>
-    <br></br>
-    <br></br>
-    <h1>Invest in Everything!</h1>
-    <h2>Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.</h2>
-    <button style="cursor: pointer; color:aqua; background-color: blue; padding-top: 10px; padding-bottom: 10px;">Sign up now!</button>
-</center>
+  </footer>
+
+  <script>
+    // Navigation toggle for mobile
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+
+    // Modal open/close handling
+    const modal = document.getElementById('signupModal');
+    const modalClose = document.getElementById('modalCloseBtn');
+    const openModalBtns = document.querySelectorAll('.open-modal-btn');
+
+    openModalBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (modal) modal.classList.add('active');
+      });
+    });
+
+    if (modalClose && modal) {
+      modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
+    }
+
+    // Close on overlay click
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+
+    // Close on escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
